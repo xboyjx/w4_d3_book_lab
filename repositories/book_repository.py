@@ -19,7 +19,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        author = author_repository.select(result['author_id'])
+        author = author_repository.select(results['author_id'])
         book = Book(row['title'], author, row['id'])
         books.append(book)
 
