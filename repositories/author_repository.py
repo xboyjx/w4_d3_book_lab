@@ -19,7 +19,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        author = Author(row['name'], row['id'])
+        author = Author(row['name'], row["id"])
         authors.append(author)
 
     return authors
@@ -43,4 +43,3 @@ def delete(id):
     values = [id]
     run_sql(sql, values)
 
-    
